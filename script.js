@@ -46,10 +46,24 @@ inputDiv.appendChild(numberForm);
 rootDiv.insertAdjacentElement("beforeend", inputDiv);
 
 submitBtn.addEventListener("click", function() {
-  console.log("klick");
+  nextValue();
 })
-
+ 
 
 function nextValue(){
+  responseDiv.innerHTML = ""
+  
+  let inputValue = inputNumber.value
+  console.log(inputValue);
 
+  let nextNumber = ++inputValue;
+  console.log(nextNumber);
+
+  const nextValueText = document.createElement("h2");
+  nextValueText.innerHTML = nextNumber;
+  
+  responseDiv.appendChild(nextValueText);
+  rootDiv.insertAdjacentElement("beforeend", responseDiv)
+  
+  
 }
