@@ -15,7 +15,7 @@ document.body.appendChild(rootDiv);
 
 // Heading text
 const h1 = document.createElement("h1");
-h1.innerHTML = "What comes <br>next?";
+h1.innerHTML = "What comes next?";
 
 rootDiv.insertAdjacentElement("afterbegin", h1);
 
@@ -30,7 +30,7 @@ inputNumber.setAttribute('id', 'inputNumber');
 inputNumber.setAttribute('placeholder', 'Number');
 
 submitBtn.setAttribute('type', 'submit');
-submitBtn.value = 'Add';
+submitBtn.value = '+';
 // submitBtn.addEventListener('click', addPlayer);
 
 rootDiv.insertAdjacentElement("afterbegin", numberForm);
@@ -52,7 +52,7 @@ submitBtn.addEventListener("click", function() {
 
 function nextValue(){
   responseDiv.innerHTML = ""
-  
+
   let inputValue = inputNumber.value
   console.log(inputValue);
 
