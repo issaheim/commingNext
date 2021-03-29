@@ -31,12 +31,11 @@ inputNumber.setAttribute('placeholder', 'Number');
 
 submitBtn.setAttribute('type', 'submit');
 submitBtn.value = '+';
-// submitBtn.addEventListener('click', addPlayer);
 
 rootDiv.insertAdjacentElement("afterbegin", numberForm);
 
-numberForm.id = "numberForm"
-submitBtn.id ="submitBtn"
+numberForm.id = "numberForm";
+submitBtn.id ="submitBtn";
 
 numberForm.appendChild(numberLabel);
 numberForm.appendChild(inputNumber);
@@ -47,23 +46,20 @@ rootDiv.insertAdjacentElement("beforeend", inputDiv);
 
 submitBtn.addEventListener("click", function() {
   nextValue();
-})
+});
  
 
 function nextValue(){
-  responseDiv.innerHTML = ""
+  responseDiv.innerHTML = "";
 
-  let inputValue = inputNumber.value
+  let inputValue = inputNumber.value;
   console.log(inputValue);
 
   let nextNumber = ++inputValue;
-  console.log(nextNumber);
 
   const nextValueText = document.createElement("h2");
   nextValueText.innerHTML = nextNumber;
   
   responseDiv.appendChild(nextValueText);
-  rootDiv.insertAdjacentElement("beforeend", responseDiv)
-  
-  
-}
+  rootDiv.insertAdjacentElement("beforeend", responseDiv);
+};
